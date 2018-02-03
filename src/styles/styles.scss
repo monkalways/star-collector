@@ -1,0 +1,26 @@
+@import './base/settings';
+@import './base/base';
+
+@import './components/box-layout';
+
+.DateInput_input {
+    font-family: Lato,'Helvetica Neue',Arial,Helvetica,sans-serif;
+}
+
+.CalendarMonth_caption {
+    margin-bottom: 10px;
+}
+
+.DateRangePickerInput__withBorder {
+    border: 1px solid rgba(34, 36, 38, 0.15);
+    border-radius: .28571429rem;
+}
+
+.SingleDatePickerInput__withBorder {
+    border: 1px solid rgba(34, 36, 38, 0.15);
+    border-radius: .28571429rem;
+}
+
+.SingleDatePickerInput__withBorder input[type=text] {
+    border: none !important;
+}
