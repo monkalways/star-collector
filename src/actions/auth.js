@@ -1,7 +1,7 @@
 import { firebase, googleAuthProvider } from '../firebase/firebase';
 import { push } from 'react-router-redux';
 
-import { setUsers } from '../actions/users';
+import { startSetUsers } from '../actions/users';
 import users from '../fixture/users';
 
 export const startLogin = () => {
@@ -18,7 +18,7 @@ export const startAfterLogin = (uid) => {
     return (dispatch) => {
         dispatch(login(uid));
         dispatch(push('/dashboard'));
-        dispatch(setUsers(users));
+        dispatch(startSetUsers());
     };
 }
 

@@ -2,7 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 
 import PageHeader from './PageHeader';
-import { editUser } from '../actions/users';
+import { startEditUser } from '../actions/users';
 import UserForm from './UserForm';
 
 export const EditUserPage = ({ user, handleEditUser, history }) => {
@@ -32,7 +32,7 @@ const mapStateToProps = (state, props) => {
 };
 
 const mapDispatchToProps = (dispatch) => ({
-  handleEditUser: (user) => dispatch(editUser(user.id, user))
+  handleEditUser: (user) => dispatch(startEditUser(user.id, user))
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(EditUserPage);
